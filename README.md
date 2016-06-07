@@ -3,7 +3,7 @@
 # 使用方法
 基本上可以看makefile得知, 先將一題生成3個檔案, 分別是程式檔, 測試檔, 解答.
 
-匿名規則：514.cc 514.test 514.test.ans
+匿名規則：514.cc 514.test 514.ans
 
 利用以下方法將這三個分別放置到source, tests, answer,
 
@@ -22,3 +22,11 @@
 如果是只有使用 make 就只是將有更新過後的file在source/裡做編譯到target/
 
 至於 make 514 則是對特定項目編譯, 如果有問題可以先看看makefile
+
+剩下的一個功能是astyle, 不過使用前請先確定你有astyle的功能,
+
+如果你是ubuntun你可以藉由apt-get install astyle來安裝
+
+    make astyle
+
+藉此格式化你的file, 這個部份你可以參考astyle去修改你要的規格, 用來統一程式碼風格
