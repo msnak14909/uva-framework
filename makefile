@@ -27,8 +27,8 @@ mv:
 	@(test -f *.ans && mv *.ans $(ANS) || (echo "answer file not found."));
 
 astyle:
-	@((test -f $(SOU)/*.cc && astyle --style=kr --indent=spaces=4 --indent-switches --suffix=none $(SOU)/*.cc) || \
-		(test -f *.cc && astyle --style=kr --indent=spaces=4 --indent-switches --suffix=none *.cc) || \
+	@((test -f $(SOU)/*.cc && astyle --style=kr --indent=spaces=2 --indent-switches --indent-cases -y --suffix=none $(SOU)/*.cc) || \
+		(test -f *.cc && astyle --style=kr --indent=spaces=2 --indent-switches --indent-cases -y --suffix=none *.cc) || \
 		echo "You need at least one .cc file.")
 
 clean:
