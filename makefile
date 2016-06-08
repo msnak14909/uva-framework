@@ -28,8 +28,8 @@ mv:
 
 astyle:
 	@((test -f $(SOU)/*.cc && astyle --style=kr --indent=spaces=2 --indent-switches --indent-cases -y --suffix=none $(SOU)/*.cc) || \
-		(test -f *.cc && astyle --style=kr --indent=spaces=2 --indent-switches --indent-cases -y --suffix=none *.cc) || \
-		echo "You need at least one .cc file.")
+	(test -f *.cc && astyle --style=kr --indent=spaces=2 --indent-switches --indent-cases -y --suffix=none *.cc) || \
+	echo "You need at least one .cc file.")
 
 clean:
 	$(RM) diff_log test_log
